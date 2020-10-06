@@ -29,6 +29,7 @@ cd zeek
 make
 sudo make install
 export PATH=/usr/local/zeek/bin:$PATH
+sudo /usr/local/zeek/bin/zeekctl deploy
 git clone https://github.com/SecureAuthCorp/impacket.git
 cd impacket
 python3.6 -m venv env

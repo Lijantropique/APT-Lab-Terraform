@@ -22,6 +22,13 @@ cd HELK/docker
 ./helk_install.sh -p hunting -i 10.10.98.20 -b 'helk-kibana-analysis-alert'
 cd /opt/
 git clone https://github.com/lgandx/Responder.git
+sudo apt-get install -y cmake make gcc g++ flex bison libpcap-dev libssl-dev python-dev swig zlib1g-dev
+git clone --recursive https://github.com/zeek/zeek
+cd zeek
+./configure
+make
+sudo make install
+export PATH=/usr/local/zeek/bin:$PATH
 git clone https://github.com/SecureAuthCorp/impacket.git
 cd impacket
 python3.6 -m venv env
